@@ -1,0 +1,337 @@
+
+/*
+.testing, .testing .x-form-item, .testing textarea {
+    font-family: Georgia, "Bitstream Charter", serif;
+
+    font-size: 16px;
+    color: #333333;
+    line-height: 24px;
+    background-color: white;
+}
+
+.testlogin {
+    font-family: Georgia, "Bitstream Charter", serif;
+
+    font-size: 16px;
+    color: #333333;
+    line-height: 24px;
+    background-color: white;
+}
+*/
+
+.blackboard, .learnmessage {
+    color: #eeeeee;
+    background: #555;
+}
+.testing, .testing .x-form-item, .testing textarea {
+    font-family: Georgia, "Bitstream Charter", serif;
+
+    font-size: 16px; 
+    line-height: 24px; 
+    color: #eeeeee;
+    background: #555;
+}
+
+.testlogin {
+    font-family: Georgia, "Bitstream Charter", serif;
+
+    font-size: 16px; 
+    line-height: 24px; 
+    color: #eeeeee;
+    background: #555;
+}
+
+
+.testlogin p {
+    margin: 8;
+    padding: 0;
+}
+
+.welcome .x-panel-body-default {
+    background: none;
+}
+
+.learnmessage {
+    font-family: "Cabin Sketch", cursive;
+
+    font-size: 64px;
+    
+    line-height: 64px;
+}
+
+.routingobjective {
+    font-weight: bold
+}
+
+.bold-button .x-btn-inner {
+    font-weight: bold;
+}
+
+.welcome .x-panel-body {
+    /*       font-family: 'Rock Salt', cursive;*/
+
+    font-family: "Cabin Sketch", cursive;
+    /*   font-family: 'Love Ya Like A Sister', normal;*/
+    /*font-family: 'Cabin Sketch' */
+    font-size: 50px;
+    /* font-size: 26px;*/
+    
+    color: #eeeeee;
+    /*color: #666666;*/
+    /*  color: #333333; */
+    line-height: 60px;
+    /* line-height: 42px;*/
+    /*    font-weight:bold; */
+}
+
+.welcome {
+
+    text-align: center;
+}
+
+.testing textarea {
+    font-family: sans-serif;
+}
+
+/*
+.highlightAnswer {
+    background-color: #CCCCCC !important;
+}
+
+.answerOver {
+    background-color: #F4F4F4 !important;
+}
+
+*/
+
+.highlightAnswer {
+    background-color: #111 !important;
+}
+
+.answerOver {
+    background-color: #333 !important;
+}
+
+#cockpitPanel .x-panel-header {
+    text-align: center;
+}
+
+.orange {
+    background-image: url(../images/target.png) !important;
+}
+
+.feedback {
+    background-image: url(../images/user_comment.png) !important;
+}
+
+.changepassword {
+    background-image: url(../images/change_password.png) !important;
+}
+
+.grey {
+    background-image: url(../images/enpasosGrey.gif) !important;
+}
+
+.content {
+    background-image: url(../images/navigation-000-white.png) !important;
+}
+
+.blue {
+    background-image: url(../images/universal.png) !important;
+}
+
+.user {
+    background-image: url(../images/user_orange.png) !important;
+}
+
+.what {
+    background-image: url(../images/map.png) !important;
+}
+
+.module2subject {
+    background-image: url(../images/module2subject.png) !important;
+}
+
+.x-btn-default-toolbar-small-icon .module2subject {
+    padding: 0;
+    width: 43px !important;
+}
+
+.how {
+    background-image: url(../images/compass.png) !important;
+}
+
+.download {
+    background-image: url(../images/drive-download.png) !important;
+}
+
+.upload {
+    background-image: url(../images/drive-upload.png) !important;
+}
+
+.doit {
+    background-image: url(../images/paper-plane.png) !important;
+}
+
+.admin {
+    background-image: url(../images/cog.png) !important;
+}
+
+.login {
+    background-image: url(../images/door.png) !important;
+}
+
+.logout {
+    background-image: url(../images/door-open-out.png) !important;
+}
+
+.question {
+    background-image: url(../images/question.png) !important;
+}
+
+.information {
+    background-image: url(../images/information.png) !important;
+}
+
+.measure {
+    background-image: url(../images/eye.png) !important;
+}
+
+.execute {
+    background-image: url(../images/cog.png) !important;
+}
+
+.pdf {
+    background-image: url(../images/file_extension_pdf.png) !important;
+}
+
+.youtube {
+    background-image: url(../images/youtube.png) !important;
+}
+
+.objective_done {
+    background-image: url(../images/target_done.png) !important;
+}
+
+.objective_not_relevant {
+    background-image: url(../images/target_nouserobjective.png) !important;
+}
+
+.relationForward {
+    background-image: url(../images/relation_forward.png) !important;
+}
+
+.x-grid-tree-node-expanded  .relationForward {
+    background-image: url(../images/relation_forward.png) !important;
+}
+
+.relationBackward {
+    background-image: url(../images/relation_backward.png) !important;
+}
+
+.x-grid-tree-node-expanded  .relationBackward {
+    background-image: url(../images/relation_backward.png) !important;
+}
+
+.add2 {
+    background-image: url(../images/add.png) !important;
+}
+
+.delete {
+    background-image: url(../images/delete.png) !important;
+}
+
+.save {
+    background-image: url(../images/disk.png) !important;
+}
+
+.x-grid-tree-node-expanded .grey {
+    background-image: url(../images/enpasosGrey.gif) !important;
+}
+
+.x-btn-group-default-framed {
+    background-color: #F5F5F5;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 1px;
+}
+
+/* NODES */
+
+.module {
+    background-image: url(../images/package-objective.png) !important;
+}
+
+.x-grid-tree-node-expanded  .module {
+    background-image: url(../images/package-objective.png) !important;
+}
+
+.x-grid-tree-loading .module {
+    background-image: url("../../ext/resources/themes/images/gray/tree/loading.gif") !important;
+}
+
+.module_not_relevant {
+    background-image: url(../images/package-objective-grey.png) !important;
+}
+
+.x-grid-tree-node-expanded  .module_not_relevant {
+    background-image: url(../images/package-objective-grey.png) !important;
+}
+
+.x-grid-tree-loading .module_not_relevant {
+    background-image: url("../../ext/resources/themes/images/gray/tree/loading.gif") !important;
+}
+
+.user {
+    background-image: url(../images/user_orange.png) !important;
+}
+
+.x-grid-tree-node-expanded  .user {
+    background-image: url(../images/user_orange.png) !important;
+}
+
+.x-grid-tree-loading .user {
+    background-image: url("../../ext/resources/themes/images/gray/tree/loading.gif") !important;
+}
+
+.role {
+    background-image: url(../images/user_orange.png) !important;
+}
+
+.x-grid-tree-node-expanded  .role {
+    background-image: url(../images/user_orange.png) !important;
+}
+
+.x-grid-tree-loading .role {
+    background-image: url("../../ext/resources/themes/images/gray/tree/loading.gif") !important;
+}
+
+.subject {
+    background-image: url(../images/universal.png) !important;
+}
+
+.x-grid-tree-node-expanded  .subject {
+    background-image: url(../images/universal.png) !important;
+}
+
+.x-grid-tree-loading .subject {
+    background-image: url(../../ext/resources/themes/images/gray/tree/loading.gif) !important;
+}
+
+.objective {
+    background-image: url(../images/target.png) !important;
+}
+
+.x-grid-tree-node-expanded  .objective {
+    background-image: url(../images/target.png) !important;
+}
+
+.x-grid-tree-loading .objective {
+    background-image: url(../../ext/resources/themes/images/gray/tree/loading.gif) !important;
+}
+
+
+
+
+
