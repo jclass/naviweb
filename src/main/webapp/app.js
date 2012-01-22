@@ -17,8 +17,10 @@ Ext.application({
 
     launch: function() {
         NAVI.app = this; 
+        
+
             Ext.create('NAVI.view.Viewport');
- 
+     
 
     }
 

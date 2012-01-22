@@ -163,13 +163,6 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>copy-mathjax</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>copyMathJax</goal>
-                        </goals>
-                    </execution>
-                    <execution>
                         <goals>
                             <goal>deployWebApp</goal>
                         </goals>
