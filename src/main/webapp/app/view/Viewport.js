@@ -13,12 +13,21 @@ Ext.define('NAVI.view.Viewport', {
     ],
 
 
-    layout: 'fit',
+    layout: 'border',
+    
     items: [
         {
+            region: 'north',
+            xtype: 'naviButtons'
+        },
+        {
+            region: 'center',
             xtype: 'naviLandschaft'
-        }
+
+        } 
     ]
+    
+    
 
 });
 

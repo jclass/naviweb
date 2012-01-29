@@ -3,32 +3,47 @@ Ext.define('NAVI.controller.NaviC', {
 
     stores: [  ],
 
-    views: ['Viewport', 'Landschaft'],
+    views: ['Viewport', 'Landschaft', 'Buttons'],
 
     refs: [
-//        {
-//            ref: 'work',
-//            selector: 'viewport enpasosWork'
-//        }
+          {
+              ref: 'landschaft',
+               selector: 'viewport naviLandschaft'
+            }
     ],
 
-
-
-    getLandschaft: function() {
-
-
-        var command = {
-            type:'CommandGetLandschaft'
-//            ,
-//            payload: null;
-        };
-        NAVI.controller.BusinessDelegate.execute(command, function() {
-//            me.objectiveTreeRefresh(paths);
-//            callback();
+    init: function() {
+ 
+        this.control({
+            'viewport button': {
+                click: this.tuwas
+            }
         });
-
-
+    },
+        
+    tuwas: function() {
+            var c = this.getLandschaft();
+            c.createStadt();
+            
     }
+        
+        
+//
+//    getLandschaft: function() {
+//
+//
+//        var command = {
+//            type:'CommandGetLandschaft'
+////            ,
+////            payload: null;
+//        };
+//        NAVI.controller.BusinessDelegate.execute(command, function() {
+////            me.objectiveTreeRefresh(paths);
+////            callback();
+//        });
+//
+//
+//    }
 
 
 });

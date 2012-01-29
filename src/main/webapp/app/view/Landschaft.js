@@ -27,8 +27,7 @@ Ext.define('NAVI.view.Landschaft', {
             fill: '#79BB3F',
             radius: 10,
             x: 100,
-            y: 100,
-            text: 'A',
+            y: 100, 
             opacity: 0.5
         },{
             type: 'text', 
@@ -50,6 +49,19 @@ Ext.define('NAVI.view.Landschaft', {
             y: 40
         }]
     }
-    ]
+    ],
+    
+    
+    createStadt: function() {
+        var draw = this.down('draw');
+        draw.surface.add({
+            type: 'circle',
+            fill: '#79BB3F',
+            radius: 50,
+            x: 150,
+            y: 100, 
+            opacity: 0.5
+        });
+    }
 
 });
