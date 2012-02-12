@@ -11,48 +11,68 @@ Ext.define('NAVI.view.Landschaft', {
     {
         xtype: 'draw',
         items: [
-            {
-            type: 'path', 
-            path: ['M', 100, 100, 'l',-70, -60],
-            stroke: '#ddd',
-            'stroke-width': 3
-        },{
+//            {
+//            type: 'path', 
+//            path: ['M', 100, 100, 'l',-70, -60],
+//            stroke: '#ddd',
+//            'stroke-width': 3
+//        },
+        {
             type: 'rect',
             stroke: '#ddd',
             'stroke-width': 3,
             height: 400,
             width: 800 
-        }, {
-            type: 'circle',
-            fill: '#79BB3F',
-            radius: 10,
-            x: 100,
-            y: 100, 
-            opacity: 0.5
-        },{
-            type: 'text', 
-            text: 'A',
-            x: 96.5,
-            y: 100
-        }, 
-        {
-            type: 'circle',
-            fill: '#79BB3F',
-            radius: 10,
-            x: 30,
-            y: 40,
-            opacity: 0.5
-        },{
-            type: 'text', 
-            text: 'B',
-            x: 26.5,
-            y: 40
-        }]
+        }
+//        , {
+//            type: 'circle',
+//            fill: '#79BB3F',
+//            radius: 10,
+//            x: 100,
+//            y: 100, 
+//            opacity: 0.5
+//        },{
+//            type: 'text', 
+//            text: 'A',
+//            x: 96.5,
+//            y: 100
+//        }, 
+//        {
+//            type: 'circle',
+//            fill: '#79BB3F',
+//            radius: 10,
+//            x: 30,
+//            y: 40,
+//            opacity: 0.5
+//        },{
+//            type: 'text', 
+//            text: 'B',
+//            x: 26.5,
+//            y: 40
+//        }
+]
     }
     ],
     
+    verbinde: function(nameA, nameB) {
+        var stadtA = this.staedte.get(nameA);
+        var stadtB = this.staedte.get(nameB);
+        var draw = this.down('draw');
+        var surface = draw.surface; 
+        var verbindung = surface.add({
+            type: 'path', 
+            path: ['M', stadtA.circle.x, stadtA.circle.y, 'l',stadtB.circle.x - stadtA.circle.x, stadtB.circle.y - stadtA.circle.y],
+            stroke: '#ddd',
+            'stroke-width': 3
+        });
+        verbindung.redraw();
+    },
+    
     
     createStadt: function(x, y, name) {
+        if (!this.staedte) {
+            this.staedte = new Ext.util.HashMap();
+        }
         var draw = this.down('draw');
         var surface = draw.surface; 
         var circle = surface.add({
@@ -71,6 +91,11 @@ Ext.define('NAVI.view.Landschaft', {
             x: x - 3.5,
             y: y
         });
+        var stadt = {
+            circle: circle, 
+            text: text
+        }
+        this.staedte.add(name, stadt);
         text.redraw();
 
     }
