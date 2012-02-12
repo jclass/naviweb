@@ -56,6 +56,7 @@ Ext.define('NAVI.view.Landschaft', {
     
     verbinde: function(nameA, nameB) {
         var stadtA = this.staedte.get(nameA);
+     
         var stadtB = this.staedte.get(nameB);
         var draw = this.down('draw');
         var surface = draw.surface; 
@@ -66,6 +67,18 @@ Ext.define('NAVI.view.Landschaft', {
             'stroke-width': 3
         });
         verbindung.redraw();
+        stadtA.circle.remove();
+        stadtA.text.remove();
+        stadtB.circle.remove();
+        stadtB.text.remove();
+        surface.add(stadtA.circle);
+        surface.add(stadtA.text);
+        surface.add(stadtB.circle);
+        surface.add(stadtB.text);
+        stadtA.circle.show(true);
+        stadtA.text.show(true);
+        stadtB.circle.show(true);
+        stadtB.text.show(true);
     },
     
     
@@ -82,9 +95,9 @@ Ext.define('NAVI.view.Landschaft', {
             x: x,
             y: y
             , 
-            opacity: 0.5
+            opacity: 0.8
         });
-        circle.redraw();
+        circle.show(true);
         var text = surface.add({
             type: 'text', 
             text: name,
@@ -96,7 +109,7 @@ Ext.define('NAVI.view.Landschaft', {
             text: text
         }
         this.staedte.add(name, stadt);
-        text.redraw();
+        text.show(true);
 
     }
 
