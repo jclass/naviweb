@@ -23,7 +23,8 @@ Ext.define('NAVI.controller.NaviC', {
         
     tuwas: function() {
             var c = this.getLandschaft();
-            c.createStadt();
+            c.createStadt(50, 75, 'F');
+            c.createStadt(90, 87, 'P');
             
     }
         

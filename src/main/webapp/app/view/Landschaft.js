@@ -52,20 +52,27 @@ Ext.define('NAVI.view.Landschaft', {
     ],
     
     
-    createStadt: function() {
+    createStadt: function(x, y, name) {
         var draw = this.down('draw');
         var surface = draw.surface; 
         var circle = surface.add({
             type: 'circle',
             fill: '#79BB3F',
-            radius: 50,
-            x: 150,
-            y: 100
+            radius: 10,
+            x: x,
+            y: y
             , 
             opacity: 0.5
         });
         circle.redraw();
- 
+        var text = surface.add({
+            type: 'text', 
+            text: name,
+            x: x - 3.5,
+            y: y
+        });
+        text.redraw();
+
     }
 
 });
