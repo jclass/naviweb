@@ -25,7 +25,9 @@ Ext.define('NAVI.controller.NaviC', {
             var c = this.getLandschaft();
             c.createStadt(50, 75, 'F');
             c.createStadt(90, 87, 'P');
+            c.createStadt(100, 30, 'A');
             c.verbinde('F', 'P');
+            c.verbinde('A', 'F');
             
     }
         

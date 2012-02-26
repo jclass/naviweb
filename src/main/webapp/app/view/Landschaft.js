@@ -54,7 +54,14 @@ Ext.define('NAVI.view.Landschaft', {
     }
     ],
     
+    showAll: function() {
+        
+    },
+    
     verbinde: function(nameA, nameB) {
+//        if (!this.verbindungen) {
+//            this.verbindungen = [new Ext.util.HashMap();
+//        }
         var stadtA = this.staedte.get(nameA);
      
         var stadtB = this.staedte.get(nameB);
@@ -72,10 +79,11 @@ Ext.define('NAVI.view.Landschaft', {
         stadtB.circle.remove();
         stadtB.text.remove();
         surface.add(stadtA.circle);
-        surface.add(stadtA.text);
         surface.add(stadtB.circle);
         surface.add(stadtB.text);
         stadtA.circle.show(true);
+        
+        surface.add(stadtA.text);
         stadtA.text.show(true);
         stadtB.circle.show(true);
         stadtB.text.show(true);
