@@ -36,8 +36,6 @@ Ext.define('NAVI.view.Landschaft', {
         }, this);
         
 
-        
-        
     },
     
     getStadt: function(name) {

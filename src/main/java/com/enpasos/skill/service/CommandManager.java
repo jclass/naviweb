@@ -34,7 +34,7 @@ public class CommandManager implements Serializable {
     public Object execute(CommandGetLandschaft command) throws Exception {
        
         Landschaft landschaft = App.getLandschaft();
-        return landschaft;
+        return landschaft.getDTO();
     }
         
 }

@@ -28,5 +28,20 @@ public class Strasse {
         return stadtA.toString() + " - " + laenge + " - " + stadtB.toString() ;
     }
     
+    
+    public int hashCode() {
+        return stadtA.hashCode() + 13 * stadtB.hashCode();
+    }
+    
+    
+    public boolean equals(Object o) {
+        if (!(o instanceof Stadt)) {
+            return false;
+        }
+        Strasse s = (Strasse)o;
+        return s.stadtA.name.equals(this.stadtA.name)  && s.stadtB.name.equals(this.stadtB.name);
+       
+    }
+    
 }
  

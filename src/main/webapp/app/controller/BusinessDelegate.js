@@ -2,16 +2,16 @@ Ext.define('NAVI.controller.BusinessDelegate', {
     statics: {
 
         getContextPath: function() {
-            if (!SKILL.contextPath) {
+            if (!NAVI.contextPath) {
                 var base = document.getElementsByTagName('base')[0];
                 if (base && base.href && (base.href.length > 0)) {
                     base = base.href;
                 } else {
                     base = document.URL;
                 }
-                SKILL.contextPath = base.substr(0, base.indexOf("/", base.indexOf("/", base.indexOf("//") + 2) + 1));
+                NAVI.contextPath = base.substr(0, base.indexOf("/", base.indexOf("/", base.indexOf("//") + 2) + 1));
             }
-            return SKILL.contextPath;
+            return NAVI.contextPath;
 
         },
 
@@ -34,10 +34,10 @@ Ext.define('NAVI.controller.BusinessDelegate', {
                             exceptioncallback(object.message);
                         } else {
                             if ("not logged in" == object.message) {
-                                var c = SKILL.app.getController('SKILL.controller.Users');
+                                var c = NAVI.app.getController('NAVI.controller.Users');
                                 c.logoutUser();
                             } else {
-                                SKILL.controller.BusinessDelegate.exceptionHandling(object.message);
+                                NAVI.controller.BusinessDelegate.exceptionHandling(object.message);
                             }
                         }
                     }
@@ -49,7 +49,7 @@ Ext.define('NAVI.controller.BusinessDelegate', {
                     if (exceptioncallback) {
                         exceptioncallback(message);
                     } else {
-                        SKILL.controller.BusinessDelegate.exceptionHandling(message);
+                        NAVI.controller.BusinessDelegate.exceptionHandling(message);
                     }
                 },
                 params: params
@@ -76,10 +76,10 @@ Ext.define('NAVI.controller.BusinessDelegate', {
                             exceptioncallback(object.message);
                         } else {
                             if ("not logged in" == object.message) {
-                                var c = SKILL.app.getController('SKILL.controller.Users');
+                                var c = NAVI.app.getController('NAVI.controller.Users');
                                 c.logoutUser();
                             } else {
-                                SKILL.controller.BusinessDelegate.exceptionHandling(object.message);
+                                NAVI.controller.BusinessDelegate.exceptionHandling(object.message);
                             }
                         }
                     }
@@ -92,7 +92,7 @@ Ext.define('NAVI.controller.BusinessDelegate', {
                     if (exceptioncallback) {
                         exceptioncallback(message);
                     } else {
-                        SKILL.controller.BusinessDelegate.exceptionHandling(message);
+                        NAVI.controller.BusinessDelegate.exceptionHandling(message);
                     }
                 },
                 jsonData: params
@@ -104,7 +104,7 @@ Ext.define('NAVI.controller.BusinessDelegate', {
 
 
         execute: function(command, callback) {
-            SKILL.controller.BusinessDelegate.callServerJson({
+            NAVI.controller.BusinessDelegate.callServerJson({
                 url: 'service/' + command.type,
                 callback: callback,
                 params:  command

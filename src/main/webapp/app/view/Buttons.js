@@ -8,7 +8,15 @@ Ext.define('NAVI.view.Buttons', {
     {
          
             // xtype: 'button', // default for Toolbars
-            text: 'Neue Stadt'
+            text: 'Create Landschaft',
+            action: 'create'
+         
+    }, {
+         
+            // xtype: 'button', // default for Toolbars
+            text: 'Landschaft vom Server holen',
+            action: 'landschaftserver'
+               
          
     }
     ]

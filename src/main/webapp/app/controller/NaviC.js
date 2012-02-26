@@ -15,8 +15,12 @@ Ext.define('NAVI.controller.NaviC', {
     init: function() {
  
         this.control({
-            'viewport button': {
+            'viewport button[action=create]': {
                 click: this.tuwas
+            }, 
+            
+            'viewport button[action=landschaftserver]': {
+                click: this.getLandschaftFromServer
             }
         });
     },
@@ -55,25 +59,26 @@ Ext.define('NAVI.controller.NaviC', {
                 ]
             });
             
+    },
+        
+        
+
+    getLandschaftFromServer: function() {
+
+
+        var command = {
+            type:'CommandGetLandschaft'
+//            ,
+//            payload: null;
+        };
+        NAVI.controller.BusinessDelegate.execute(command, function(landschaft) {
+            var x = 123;
+//            me.objectiveTreeRefresh(paths);
+//            callback();
+        });
+
+
     }
-        
-        
-//
-//    getLandschaft: function() {
-//
-//
-//        var command = {
-//            type:'CommandGetLandschaft'
-////            ,
-////            payload: null;
-//        };
-//        NAVI.controller.BusinessDelegate.execute(command, function() {
-////            me.objectiveTreeRefresh(paths);
-////            callback();
-//        });
-//
-//
-//    }
 
 
 });
