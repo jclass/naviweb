@@ -11,12 +11,6 @@ Ext.define('NAVI.view.Landschaft', {
     {
         xtype: 'draw',
         items: [
-//            {
-//            type: 'path', 
-//            path: ['M', 100, 100, 'l',-70, -60],
-//            stroke: '#ddd',
-//            'stroke-width': 3
-//        },
         {
             type: 'rect',
             stroke: '#ddd',
@@ -24,69 +18,67 @@ Ext.define('NAVI.view.Landschaft', {
             height: 400,
             width: 800 
         }
-//        , {
-//            type: 'circle',
-//            fill: '#79BB3F',
-//            radius: 10,
-//            x: 100,
-//            y: 100, 
-//            opacity: 0.5
-//        },{
-//            type: 'text', 
-//            text: 'A',
-//            x: 96.5,
-//            y: 100
-//        }, 
-//        {
-//            type: 'circle',
-//            fill: '#79BB3F',
-//            radius: 10,
-//            x: 30,
-//            y: 40,
-//            opacity: 0.5
-//        },{
-//            type: 'text', 
-//            text: 'B',
-//            x: 26.5,
-//            y: 40
-//        }
 ]
     }
     ],
     
-    showAll: function() {
+    
+    
+    show: function(daten) {
+        this.daten = daten;
+        
+        Ext.Array.forEach(daten.strassen, function(strasse) {
+            this.verbinde(strasse.stadt1, strasse.stadt2);
+        }, this);
+       
+        Ext.Array.forEach(daten.staedte, function(stadt) {
+            this.createStadt(stadt.x, stadt.y, stadt.name);
+        }, this);
+        
+
+        
         
     },
+    
+    getStadt: function(name) {
+        for(var i = 0; i < this.daten.staedte.length; i++) {
+            var stadt = this.daten.staedte[i];
+            if (stadt.name == name) {
+                return stadt;
+            }
+        }
+    },
+    
     
     verbinde: function(nameA, nameB) {
 //        if (!this.verbindungen) {
 //            this.verbindungen = [new Ext.util.HashMap();
 //        }
-        var stadtA = this.staedte.get(nameA);
+        var stadtA = this.getStadt(nameA);
      
-        var stadtB = this.staedte.get(nameB);
+        var stadtB = this.getStadt(nameB);
         var draw = this.down('draw');
         var surface = draw.surface; 
         var verbindung = surface.add({
             type: 'path', 
-            path: ['M', stadtA.circle.x, stadtA.circle.y, 'l',stadtB.circle.x - stadtA.circle.x, stadtB.circle.y - stadtA.circle.y],
+            path: ['M', stadtA.x, stadtA.y, 'l',stadtB.x - stadtA.x, stadtB.y - stadtA.y],
             stroke: '#ddd',
             'stroke-width': 3
         });
         verbindung.redraw();
-        stadtA.circle.remove();
-        stadtA.text.remove();
-        stadtB.circle.remove();
-        stadtB.text.remove();
-        surface.add(stadtA.circle);
-        surface.add(stadtB.circle);
-        surface.add(stadtB.text);
-        stadtA.circle.show(true);
-        
-        surface.add(stadtA.text);
-        stadtA.text.show(true);
-        stadtB.circle.show(true);
-        stadtB.text.show(true);
+//        stadtA.circle.remove();
+//        stadtA.text.remove();
+//        stadtB.circle.remove();
+//        stadtB.text.remove();
+//        surface.add(stadtA.circle);
+//        surface.add(stadtB.circle);
+//        surface.add(stadtB.text);
+//        stadtA.circle.show(true);
+//        
+//        surface.add(stadtA.text);
+//        stadtA.text.show(true);
+//        stadtB.circle.show(true);
+//        stadtB.text.show(true);
     },
     
     

@@ -23,11 +23,37 @@ Ext.define('NAVI.controller.NaviC', {
         
     tuwas: function() {
             var c = this.getLandschaft();
-            c.createStadt(50, 75, 'F');
-            c.createStadt(90, 87, 'P');
-            c.createStadt(100, 30, 'A');
-            c.verbinde('F', 'P');
-            c.verbinde('A', 'F');
+//            c.createStadt(50, 75, 'F');
+//            c.createStadt(90, 87, 'P');
+//            c.createStadt(100, 30, 'A');
+//            c.verbinde('F', 'P');
+//            c.verbinde('A', 'F');
+            c.show({
+                staedte: [
+                    {
+                        x: 50, 
+                        y: 75, 
+                        name: 'F'
+                    }, {
+                        x: 90, 
+                        y: 87, 
+                        name: 'P'
+                    }, {
+                        x: 100, 
+                        y: 30, 
+                        name: 'A'
+                    }
+                ],
+                strassen: [
+                    {
+                        stadt1: 'F',
+                        stadt2: 'P'
+                    }, {
+                        stadt1: 'A',
+                        stadt2: 'F'
+                    }
+                ]
+            });
             
     }
         
