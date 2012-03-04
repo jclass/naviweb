@@ -60,6 +60,22 @@ Ext.define('NAVI.controller.NaviC', {
             });
             
     },
+    
+    
+    landschaftAusgeben: function(maxX, maxY, landschaftServer)  {
+        var landschaft = this.transform(landschaftServer);
+        var c = this.getLandschaft();
+        c.show(landschaft);
+    },
+    
+    transform: function(landschaftServer) {
+        Ext.Array.forEach(landschaftServer.staedte, function(stadt) {
+            stadt.x = 122;
+            stadt.y = 90;
+        }, this);
+        
+        return landschaftServer;
+    },
         
         
 
@@ -71,10 +87,11 @@ Ext.define('NAVI.controller.NaviC', {
 //            ,
 //            payload: null;
         };
+        
+        var me = this;
         NAVI.controller.BusinessDelegate.execute(command, function(landschaft) {
-            var x = 123;
-//            me.objectiveTreeRefresh(paths);
-//            callback();
+            me.landschaftAusgeben(800, 400, landschaft)
+            
         });
 
 
