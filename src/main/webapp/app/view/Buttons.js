@@ -18,6 +18,13 @@ Ext.define('NAVI.view.Buttons', {
             action: 'landschaftserver'
                
          
+    }, {
+         
+            // xtype: 'button', // default for Toolbars
+            text: 'Test Translate',
+            action: 'translate'
+               
+         
     }
     ]
 

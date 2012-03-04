@@ -70,6 +70,23 @@ Ext.define('NAVI.view.Landschaft', {
     },
     
     
+    translate: function(name, x, y) {
+        var stadt  = this.staedte.get(name);
+        stadt.circle.setAttributes({
+            translate: {
+                x: x,
+                y: y
+            }
+        }, true);
+                stadt.text.setAttributes({
+            translate: {
+                x: x,
+                y: y
+            }
+        }, true);
+    },
+    
+    
     createStadt: function(x, y, name) {
         if (!this.staedte) {
             this.staedte = new Ext.util.HashMap();

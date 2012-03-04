@@ -21,8 +21,17 @@ Ext.define('NAVI.controller.NaviC', {
             
             'viewport button[action=landschaftserver]': {
                 click: this.getLandschaftFromServer
+            }, 
+            
+            'viewport button[action=translate]': {
+                click: this.translateTest
             }
         });
+    },
+    
+    translateTest: function() {
+        var c = this.getLandschaft();
+        c.translate('A', 100, 100);
     },
         
     tuwas: function() {
