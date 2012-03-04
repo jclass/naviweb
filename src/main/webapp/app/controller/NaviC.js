@@ -63,15 +63,15 @@ Ext.define('NAVI.controller.NaviC', {
     
     
     landschaftAusgeben: function(maxX, maxY, landschaftServer)  {
-        var landschaft = this.transform(landschaftServer);
+        var landschaft = this.transform(maxX, maxY, landschaftServer);
         var c = this.getLandschaft();
         c.show(landschaft);
     },
     
-    transform: function(landschaftServer) {
+    transform: function(maxX, maxY, landschaftServer) {
         Ext.Array.forEach(landschaftServer.staedte, function(stadt) {
-            stadt.x = 122;
-            stadt.y = 90;
+            stadt.x = Math.floor(Math.random()*maxX);
+            stadt.y = Math.floor(Math.random()*maxY);
         }, this);
         
         return landschaftServer;

@@ -73,35 +73,9 @@ public class App {
         Strasse cl = new Strasse(c, 40, l);
         Strasse cx = new Strasse(c, 23, x);
         Strasse dl = new Strasse(d, 95, l);
-        
-//        land.staedte.add(z);
-//        land.staedte.add(o);
-//        land.staedte.add(f);
-//        land.staedte.add(p);
-//        land.staedte.add(h);
-//        land.staedte.add(y);
-//        land.staedte.add(g);
-//        land.staedte.add(h);
-//        land.staedte.add(d);
-//        land.staedte.add(a);
-//        land.staedte.add(e);
-//        land.staedte.add(i);
-//        land.staedte.add(c);
-//        land.staedte.add(x);
-//        land.staedte.add(n);
-//        land.staedte.add(b);
-//        land.staedte.add(e);
-//        land.staedte.add(k);
-//        land.staedte.add(l);
-//        land.staedte.add(m);
+
         return land;
        
     }
-     
-
-       
-       
-   
  
-    
 }
