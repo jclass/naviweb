@@ -11,10 +11,11 @@ public class Stadt {
     Weg kuerzesterWeg;
     
        
-    public Stadt(String name) {
+    public Stadt(String name, Landschaft landschaft) {
         this.name = name;
         this.strassen = new HashSet<>();
         kuerzesterWegLaenge = Integer.MAX_VALUE;
+        landschaft.staedte.add(this);
     }
 
     

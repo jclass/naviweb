@@ -4,8 +4,8 @@ Ext.define('NAVI.view.Landschaft', {
     alias : 'widget.naviLandschaft',
 
     layout: 'fit',
-//    width: 10000,
-//    height: 300,
+
+
 
     items: [
     {
@@ -49,14 +49,16 @@ Ext.define('NAVI.view.Landschaft', {
     
     
     verbinde: function(nameA, nameB) {
-//        if (!this.verbindungen) {
-//            this.verbindungen = [new Ext.util.HashMap();
-//        }
+        
+        console.log(nameA + '>' + nameB);
+ 
         var stadtA = this.getStadt(nameA);
      
         var stadtB = this.getStadt(nameB);
+        
         var draw = this.down('draw');
         var surface = draw.surface; 
+        if (stadtB.x - stadtA.x == 0 && stadtB.y - stadtA.y == 0) return;
         var verbindung = surface.add({
             type: 'path', 
             path: ['M', stadtA.x, stadtA.y, 'l',stadtB.x - stadtA.x, stadtB.y - stadtA.y],
@@ -64,19 +66,7 @@ Ext.define('NAVI.view.Landschaft', {
             'stroke-width': 3
         });
         verbindung.redraw();
-//        stadtA.circle.remove();
-//        stadtA.text.remove();
-//        stadtB.circle.remove();
-//        stadtB.text.remove();
-//        surface.add(stadtA.circle);
-//        surface.add(stadtB.circle);
-//        surface.add(stadtB.text);
-//        stadtA.circle.show(true);
-//        
-//        surface.add(stadtA.text);
-//        stadtA.text.show(true);
-//        stadtB.circle.show(true);
-//        stadtB.text.show(true);
+ 
     },
     
     

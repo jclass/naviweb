@@ -20,24 +20,24 @@ public class App {
 
     public static Landschaft getLandschaft() {
         Landschaft land = new Landschaft();
-        Stadt z = new Stadt("Z");
-        Stadt o = new Stadt("O");
-        Stadt f = new Stadt("F");
-        Stadt p = new Stadt("P");
-        Stadt h = new Stadt("H");
-        Stadt y = new Stadt("Y");    
-        Stadt g = new Stadt("G");
-        Stadt l = new Stadt("L");
-        Stadt d = new Stadt("D");
-        Stadt a = new Stadt("A");
-        Stadt m = new Stadt("M");
-        Stadt i = new Stadt("I");
-        Stadt c = new Stadt("C");
-        Stadt x = new Stadt("X");
-        Stadt n = new Stadt("N");
-        Stadt b = new Stadt("B");
-        Stadt e = new Stadt("E");
-        Stadt k = new Stadt("K");
+        Stadt z = new Stadt("Z", land);
+        Stadt o = new Stadt("O", land);
+        Stadt f = new Stadt("F", land);
+        Stadt p = new Stadt("P", land);
+        Stadt h = new Stadt("H", land);
+        Stadt y = new Stadt("Y", land);    
+        Stadt g = new Stadt("G", land);
+        Stadt l = new Stadt("L", land);
+        Stadt d = new Stadt("D", land);
+        Stadt a = new Stadt("A", land);
+        Stadt m = new Stadt("M", land);
+        Stadt i = new Stadt("I", land);
+        Stadt c = new Stadt("C", land);
+        Stadt x = new Stadt("X", land);
+        Stadt n = new Stadt("N", land);
+        Stadt b = new Stadt("B", land);
+        Stadt e = new Stadt("E", land);
+        Stadt k = new Stadt("K", land);
         
         Strasse ke = new Strasse(k, 31, e);
         Strasse oe = new Strasse(o, 102, e);
@@ -74,25 +74,26 @@ public class App {
         Strasse cx = new Strasse(c, 23, x);
         Strasse dl = new Strasse(d, 95, l);
         
-        land.staedte.add(z);
-        land.staedte.add(o);
-        land.staedte.add(f);
-        land.staedte.add(p);
-        land.staedte.add(h);
-        land.staedte.add(y);
-        land.staedte.add(g);
-        land.staedte.add(h);
-        land.staedte.add(d);
-        land.staedte.add(a);
-        land.staedte.add(e);
-        land.staedte.add(i);
-        land.staedte.add(c);
-        land.staedte.add(x);
-        land.staedte.add(n);
-        land.staedte.add(b);
-        land.staedte.add(e);
-        land.staedte.add(k);
-        land.staedte.add(m);
+//        land.staedte.add(z);
+//        land.staedte.add(o);
+//        land.staedte.add(f);
+//        land.staedte.add(p);
+//        land.staedte.add(h);
+//        land.staedte.add(y);
+//        land.staedte.add(g);
+//        land.staedte.add(h);
+//        land.staedte.add(d);
+//        land.staedte.add(a);
+//        land.staedte.add(e);
+//        land.staedte.add(i);
+//        land.staedte.add(c);
+//        land.staedte.add(x);
+//        land.staedte.add(n);
+//        land.staedte.add(b);
+//        land.staedte.add(e);
+//        land.staedte.add(k);
+//        land.staedte.add(l);
+//        land.staedte.add(m);
         return land;
        
     }
